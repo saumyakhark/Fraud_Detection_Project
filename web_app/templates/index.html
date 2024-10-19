@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/styles.css">
+    <title>Fraud Detection System</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Fraud Detection System</h1>
+        <form action="/predict" method="POST">
+            <label for="Transaction Amount">Transaction Amount:</label>
+            <input type="text" name="Transaction Amount" required>
+            <label for="Transaction Time">Transaction Time:</label>
+            <input type="text" name="Transaction Time" required>
+            <label for="User ID">User ID:</label>
+            <input type="text" name="User ID" required>
+            <label for="Merchant ID">Merchant ID:</label>
+            <input type="text" name="Merchant ID" required>
+            <label for="Location Code">Location Code:</label>
+            <input type="text" name="Location Code" required>
+            <label for="Transaction Type">Transaction Type:</label>
+            <input type="text" name="Transaction Type" required>
+            <label for="Account Age (days)">Account Age (days):</label>
+            <input type="text" name="Account Age (days)" required>
+            <label for="Number of Previous Transactions">Number of Previous Transactions:</label>
+            <input type="text" name="Number of Previous Transactions" required>
+            <label for="Average Transaction Amount">Average Transaction Amount:</label>
+            <input type="text" name="Average Transaction Amount" required>
+            <label for="Suspicious Activity Count">Suspicious Activity Count:</label>
+            <input type="text" name="Suspicious Activity Count" required>
+            <button type="submit">Predict</button>
+        </form>
+        {% if prediction_text %}
+            <h2>{{ prediction_text }}</h2>
+        {% endif %}
+    </div>
+</body>
+</html>

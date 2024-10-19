@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fraud Detection App</title>
+    <link rel="stylesheet" href="static/styles.css">
+    <script src="static/scripts.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Fraud Detection Prediction</h1>
+        <form action="/predict" method="post">
+            <input type="number" name="amount" placeholder="Enter Amount" required>
+            <!-- Add more inputs as needed -->
+            <input type="submit" value="Predict">
+        </form>
+        <div class="result-container" id="result" style="display: none;">
+            <h2>Prediction Result: <span id="prediction"></span></h2>
+        </div>
+    </div>
+</body>
+</html>
