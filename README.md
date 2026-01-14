@@ -1,6 +1,7 @@
 Fraud Detection Project
 Overview-
 
+
 This project is designed to detect fraudulent transactions using machine learning. The model predicts whether a given transaction is legitimate or fraudulent based on multiple features of the transaction data. The project is built using Python, and the dataset is preprocessed to retain only the most relevant features.
 
 Tech Stacks used:
